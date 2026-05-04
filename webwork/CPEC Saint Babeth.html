@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/user/Music/progect.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CPEC Saint Babeth</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    background: #003366;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px;
+    text-align: center;
+}
+
+/* HOME */
+#home {
+    background: url('images/school.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    cursor: pointer;
+}
+
+/* CONTACT FORM */
+input, textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>CPEC Saint Babeth</h1>
+    <nav>
+        <ul>
+            <li><a href="file:///C:/Users/user/Music/progect.html#home">Home</a></li>
+            <li><a href="file:///C:/Users/user/Music/progect.html#about">About Us</a></li>
+            <li><a href="file:///C:/Users/user/Music/progect.html#departments">Departments</a></li>
+            <li><a href="file:///C:/Users/user/Music/progect.html#workshops">Workshops</a></li>
+            <li><a href="file:///C:/Users/user/Music/progect.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <h2>Welcome to CPEC Saint Babeth</h2>
+    <p>
+        A private educational institution in Kigali providing quality education 
+        in general and technical studies.
+    </p>
+    <button onclick="applyNow()">Apply Now</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        CPEC Saint Babeth is a private school located in Kigali, Rwanda.
+        We offer Ordinary Level education (S1, S2, S3) and technical training.
+    </p>
+    <p>
+        Our technical programs include Software Development and Multimedia 
+        at levels L3, L4, and L5.
+    </p>
+</section>
+
+<!-- DEPARTMENTS -->
+<section id="departments">
+    <h2>Departments</h2>
+    <ul>
+        <li>Ordinary Level (S1, S2, S3)</li>
+        <li>Software Development (L3, L4, L5)</li>
+        <li>Multimedia Studies (L3, L4, L5)</li>
+    </ul>
+</section>
+
+<!-- WORKSHOPS -->
+<section id="workshops">
+    <h2>Workshops</h2>
+    <p>We provide practical training through:</p>
+    <ul>
+        <li>Software Development Workshop</li>
+        <li>Multimedia Workshop</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name"><br>
+        <input type="email" id="email" placeholder="Your Email"><br>
+        <textarea id="message" placeholder="Your Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="response"></p>
+
+    <p>Email: info@cpec.rw</p>
+    <p>Phone: +250 788 000 000</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 CPEC Saint Babeth | Kigali, Rwanda</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function applyNow() {
+    alert("Application feature coming soon!");
+}
+
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+        alert("Please fill all fields");
+        return false;
+    }
+
+    document.getElementById("response").innerHTML =
+        "Thank you! Your message has been sent successfully.";
+
+    return false;
+}
+</script>
+
+
+</body></html>
